@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,opsz,wght@0,18..144,300..900;1,18..144,300..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* CSS Variables */
+:root {
+  --primary-font: "Merriweather"; /* Headings */
+  --secondary-font: "Roboto"; /* Body */
+  --primary-color: #263238; /* Deep blue-grey: complements coding-photo backgrounds, modern and tech-focused */
+  --secondary-color: #1a1a1a; /* Near-black for strong text contrast */
+  --tertiary-color: #797979; /* Light gray hovered buttons etc */
+  --accent-color: #d84315; /* Highlight colour, used for incorrect answers. */
+  --accent-color-two: #4bad3c; /* Another highlight colour, for correct messages. */
+  --background-color: #ffffff; /* Pure white for maximum readability */
+}
+
+/* Global styles */
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--secondary-font);
+  font-size: 1rem;
+  color: var(--secondary-color);
+}
+
+main {
+  margin: auto;
+  background-color: var(--background-color);
+}
+
+section {
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+
+h1 {
+  font-family: var(--primary-font);
+  color: var(--background-color);
+  margin-top: 0.5rem;
+}
+
+h2 {
+    font-family: var(--primary-font);
+    color: var(--secondary-color);
+    font-weight: 600;
+    font-size: 2rem;
+}
+
+h3 {
+  font-family: var(--secondary-font);
+  color: var(--secondary-color);
+  margin-bottom: 1rem;
+}
+
+
+/* NAVBAR STYLES */
+
+.navbar {
+  background-color: var(--primary-color);
+  padding-left: 30px;
+  padding-right: 30px;
+  min-height: 3rem;
+}
+
+.navbarNav {
+  color: #f2f2f2;
+}
+
+.navbar-brand > img {
+  max-height: 50px;
+  max-width: auto;
+}
+
+/* HERO SECTION STYLES */
+
+.hero {
+  background: url(../images/webp/coding-dojo-large.webp) no-repeat center
+    center/cover;
+  background-color: rgba(0, 0, 0, 0.6); /* dark layer */
+  background-blend-mode: multiply;
+  min-height: 40vh; /* Adjust as needed */
+  width: 100%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-text {
+  color: #f2f2f2;
+  font-size: 1rem;
+}
+
+.hero-character {
+  max-width: 150px; /* Adjust as needed */
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* QUIZ SECTION STYLES */
+
+.quiz-container {
+  color: var(--secondary-color);
+  margin: auto;
+  padding: 20px;
+  background: var(--background-color);
+  box-shadow: 0 4px 16px rgba(46, 125, 50, 0.08);
+}
+
+.quiz-container > h1 {
+  font-family: var(--secondary-font);
+  color: var(--secondary-color);
+}
+
+.quiz-container .question
+{
+  font-size: 20px;
+}
+
+.quiz-container > h2,
+.timer {
+  padding: 20px;
+  color: var(--secondary-color);
+  text-align: left;
+  display: flex;
+  position: relative;
+}
+
+/* Styling for the timer when time is running out */
+.timer.danger {
+    color: var(--accent-color);
+}
+
+/* Options */
+
+.quiz-container .options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 24px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.quiz-container .options button,
+.quiz-container .options label {
+  background: var(--background-color);
+  color: var(--secondary-color);
+  border: 2px solid var(--secondary-color);
+  border-radius: 8px;
+  padding: 1rem;
+  font-size: 1rem;
+  font-family: var(--secondary-font);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s, box-shadow 0.2s;
+  box-shadow: 0 2px 8px rgba(27, 94, 32, 0.08);
+}
+
+.quiz-container .options button.incorrect {
+  background: var(--accent-color);
+  color: var(--background-color);
+  border-color: var(--accent-color);
+}
+
+.quiz-container .options button.incorrect:hover {
+  background: var(--accent-color);
+  color: var(--background-color);
+  border-color: var(--accent-color);
+}
+
+.quiz-container .options button.correct {
+  background: var(--accent-color-two);
+  color: var(--background-color);
+  border-color: var(--accent-color-two);
+}
+
+.quiz-container .options button:focus,
+.quiz-container .options label:focus-within {
+  border-color: var(--accent-color);
+  box-shadow: 0 0 0 3px rgba(216, 67, 21, 0.2);
+}
+
+.quiz-container .options button:hover,
+.quiz-container .options label:hover {
+  background: var(--tertiary-color);
+  color: var(--background-color);
+  border-color: var(--tertiary-color);
+}
+
+.quiz-container .options button.correct:hover {
+  background: var(--accent-color-two);
+  color: var(--background-color);
+  border-color: var(--accent-color-two);
+}
+
+/* LEARN MORE */
+
+.learn-more {
+  background-color: var(--background-color);
+}
+
+.card:hover {
+  box-shadow: 0 4px 24px rgba(0,0,0,0.12);
+  transform: translateY(-4px) scale(1.02);
+  transition: box-shadow 0.2s, transform 0.2s;
+}
+
+
+/* Custom Footer Styling */
+.custom-footer {
+  background: var(--background-color);
+  margin-top: auto; /* Sticky footer: push to bottom */
+}
+
+.custom-footer h5 {
+  color: var(--secondary-color);
+}
+
+.footer-link {
+  color: var(--secondary-color);
+  transition: color 0.2s;
+}
+
+.footer-link:hover {
+  color: var(--accent-color);
+  text-decoration: underline;
+}
+
+
+/* Remove duplicate sticky footer color overrides, keep only margin-top for stickiness */
+
+/* Media Queries for screen responsiveness */
+
+/* Extra small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+  /* xs */
+  /* ...your styles for xs screens... */
+  .navbar {
+    min-height: 2.5rem;
+  }
+
+  .hero {
+    background: url(../images/webp/coding-dojo-xsmall.webp) no-repeat center
+      center/cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+    min-height: 100vh;
+  }
+
+  .hero-character {
+    max-width: 120px;
+  }
+
+  .quiz-container {
+    min-height: 100vh;
+  }
+  
+  .quiz-container .options {
+    grid-template-columns: 1fr;
+  }
+  
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+  /* sm */
+  /* ...your styles for sm screens... */
+  .navbar {
+    min-height: 2.5rem;
+  }
+
+  .hero {
+    background: url(../images/webp/coding-dojo-small.webp) no-repeat center
+      center/cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+    min-height: 100vh;
+  }
+
+  .hero-character {
+    max-width: 140px;
+  }
+
+  .quiz-container {
+    min-height: 100vh;
+  }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  /* md */
+  /* ...your styles for md screens... */
+
+  .hero {
+    background: url(../images/webp/coding-dojo-medium.webp) no-repeat center
+      center/cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+    min-height: 60vh;
+  }
+
+  .hero-character {
+    max-width: 160px;
+  }
+
+}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  /* lg */
+  /* ...your styles for lg screens... */
+
+  .hero {
+    background: url(../images/webp/coding-dojo-large.webp) no-repeat center
+      center/cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+    min-height: 50vh;
+  }
+
+  .hero-character {
+    max-width: 180px;
+  }
+
+}
+
+/* Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  /* xl */
+  /* ...your styles for xl screens... */
+
+  .hero {
+    background: url(../images/webp/coding-dojo-large.webp) no-repeat center
+      center/cover;
+    background-color: rgba(0, 0, 0, 0.6);
+    background-blend-mode: multiply;
+    min-height: 50vh;
+  }
+
+  .hero-character {
+    max-width: 200px;
+  }
+}
