@@ -29,7 +29,7 @@
   <!-- Navbar -->
   <nav id="navbar" class="navbar navbar-expand-lg navbar-dark">
     <div class="container">
-      <a class="navbar-brand" href="index.html"><img src="assets/images/domo-logo.png" alt="DOMo Logo"> NewbieToNinja</a>
+      <a class="navbar-brand" href="index.html"><img src="assets/images/webp/domo-scaled-nav.webp" alt="DOMo Logo"> NewbieToNinja</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
@@ -58,15 +58,15 @@
 
   <!-- Intro -->
   <section class="container text-center mb-5">
-  <div class="intro-block px-3 py-4 mx-auto" style="max-width: 900px;">
-    <h2 class="fw-bold mb-3" style="font-family: var(--primary-font); color: var(--primary-color); font-size: 2rem;">
-      Whether you're just starting out or sharpening your skills, these tips will help you build better websites, write cleaner code, and work smoothly with others.
-    </h2>
-    <p class="mb-0" style="font-family: var(--secondary-font); color: var(--secondary-color); font-size: 1.2rem; line-height: 1.7;">
-      Use them as a checklist, a quick reference, or a launchpad for deeper learning.
-    </p>
-  </div>
-</section>
+    <div class="intro-block px-3 py-4 mx-auto" style="max-width: 900px;">
+      <h2 class="fw-bold mb-3">
+        Whether you're just starting out or sharpening your skills, these tips will help you build better websites, write cleaner code, and work smoothly with others.
+      </h2>
+      <p class="mb-0 fs-5 lh-base">
+        Use them as a checklist, a quick reference, or a launchpad for deeper learning.
+      </p>
+    </div>
+  </section>
 
 
 
@@ -75,12 +75,12 @@
     <section class="container py-5">
       <div class="row g-4">
         <div class="col-md-12">
-          <article class="card h-100 text-center p-3 tips-card">
+          <article class="card h-100 text-center p-3">
             <div class="card-body">
-              <h3 class="tips-heading">Developer Best Practices</h3>
+              <h3 class="card-title">Developer Best Practices</h3>
               <p class="card-text">Get advice from the pros on improving your prospects.</p>
               <div class="d-flex justify-content-center">
-                <ul class="tips-list text-start mx-auto" style="max-width: 700px;">
+                <ul class="text-start mx-auto" style="max-width: 700px;">
                   <li>Use semantic HTML tags like <code>&lt;main&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;footer&gt;</code> to improve accessibility.</li>
                   <li>Keep your CSS tidy — group related styles and use comments to explain sections.</li>
                   <li>Test your site with keyboard navigation and screen readers to catch accessibility issues early.</li>
@@ -112,19 +112,29 @@
   <footer id="footer" class="custom-footer mt-5">
     <div class="container p-4">
       <div class="row gy-4">
+
+        <!-- Center column: Team01 Hackathon + ❤️ -->
         <div class="col-12 col-lg-6 text-center order-1 order-lg-2">
-          <h2>Made with ❤️ for the Hackathon</h2>
+          <p>Made with ❤️ for the Hackathon <br>
+            © 2025 Team01. All rights reserved.</p>
         </div>
+
+        <!-- Left column: Follow Us -->
         <div class="col-12 col-lg-3 text-center text-lg-start order-2 order-lg-1">
           <h4 class="text-uppercase">Follow Us</h4>
           <ul class="list-unstyled mb-0">
-            <li><a href="https://www.twitter.com" class="footer-link" target="_blank"><i class="fab fa-twitter me-2"></i> Twitter</a></li>
-            <li><a href="https://github.com/FollowRob/Team01_Hackathon" class="footer-link" target="_blank"><i class="fab fa-github me-2"></i> GitHub</a></li>
-            <li><a href="https://www.facebook.com" class="footer-link" target="_blank"><i class="fab fa-facebook me-2"></i> Facebook</a></li>
+            <li><a href="https://www.twitter.com" class="footer-link" target="_blank" rel="noopener"><i
+                  class="fab fa-twitter me-2"></i> Twitter</a></li>
+            <li><a href="https://github.com/FollowRob/Team01_Hackathon" class="footer-link" target="_blank"
+                rel="noopener"><i class="fab fa-github me-2"></i> GitHub</a></li>
+            <li><a href="https://www.facebook.com" class="footer-link" target="_blank" rel="noopener"><i
+                  class="fab fa-facebook me-2"></i> Facebook</a></li>
           </ul>
         </div>
+
+        <!-- Right column: Navigation Links -->
         <div class="col-12 col-lg-3 text-center text-lg-end order-3">
-          <h5 class="text-uppercase">Links</h5>
+          <h4 class="text-uppercase">Links</h4>
           <ul class="list-unstyled mb-0">
             <li><a href="index.html" class="footer-link"><i class="fa-solid fa-house me-2"></i> Home</a></li>
             <li><a href="projects.html" class="footer-link"><i class="fa-solid fa-code"></i> Projects</a></li>
@@ -132,9 +142,7 @@
           </ul>
         </div>
       </div>
-      <div class="text-center p-3 footer-bottom">
-        © 2025 Team01. All rights reserved.
-      </div>
+    </div>
   </footer>
 
   <!-- Scripts -->
